@@ -15,7 +15,7 @@
   $: numUsuarios = usuarios.length;
 
   const getUsuarios = async () => {
-      await fetch(`http://localhost:3000/users`)
+      await fetch(`https://secure-sierra-28532.herokuapp.com/users`)
       .then(r => r.json())
       .then(data => {
           usuarios = data.users;
@@ -29,7 +29,7 @@
   
       console.log(reqBody);
   0
-      await fetch(`http://localhost:3000/users`, {
+      await fetch(`https://secure-sierra-28532.herokuapp.com/users`, {
           method: 'POST',
           body: reqBody,
           headers: reqHeaders,
@@ -41,7 +41,7 @@
 
   const excluirUsuario = async (idx, id) => {
 
-  await fetch(`http://localhost:3000/users/${id}`, {
+  await fetch(`https://secure-sierra-28532.herokuapp.com/users/${id}`, {
       method: 'DELETE',
       headers: reqHeaders
   }).then(() => {
@@ -58,7 +58,7 @@
     }
     console.log(JSON.stringify(reqBody));        
 
-    await fetch(`http://localhost:3000/users/${id}`, {
+    await fetch(`https://secure-sierra-28532.herokuapp.com/users/${id}`, {
         method: 'PATCH',
         body: JSON.stringify(reqBody),
         headers: reqHeaders,

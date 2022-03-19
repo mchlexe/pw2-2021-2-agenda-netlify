@@ -13,7 +13,7 @@
     let users;
 
     // onMount(async () => {
-    //     await fetch(`http://localhost:3000/users`)
+    //     await fetch(`https://secure-sierra-28532.herokuapp.com/users`)
     //     .then(r => r.json())
     //     .then(data => {
     //         users = data.users;

@@ -17,7 +17,7 @@
     export const num = numContatos;
     
     const getContatos = async () => {
-        await fetch(`http://localhost:3000/contato`)
+        await fetch(`https://secure-sierra-28532.herokuapp.com/contato`)
         .then(r => r.json())
         .then(data => {
             contatos = data.contatos;
@@ -32,7 +32,7 @@
 
         console.log(reqHeaders);
 
-        await fetch(`http://localhost:3000/contato`, {
+        await fetch(`https://secure-sierra-28532.herokuapp.com/contato`, {
             method: 'POST',
             body: reqBody,
             headers: reqHeaders,
@@ -46,7 +46,7 @@
 
     const excluirContato = async (idx, id) => {
 
-        await fetch(`http://localhost:3000/contato/${id}`, {
+        await fetch(`https://secure-sierra-28532.herokuapp.com/contato/${id}`, {
             method: 'DELETE',
             headers: reqHeaders
         }).then(() => {
@@ -65,7 +65,7 @@
         }
         console.log(JSON.stringify(reqBody));        
 
-        await fetch(`http://localhost:3000/contato/${id}`, {
+        await fetch(`https://secure-sierra-28532.herokuapp.com/contato/${id}`, {
             method: 'PATCH',
             body: JSON.stringify(reqBody),
             headers: reqHeaders,

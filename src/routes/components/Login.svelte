@@ -7,10 +7,6 @@
     let email;
     let password;
 
- 
-           
-
-
     const dispatch = createEventDispatcher();
 
     const login = async (e) => {
@@ -32,7 +28,7 @@
 
         let reqbody = {email, password}
             
-        await fetch(`http://localhost:3000/users/login`, {
+        await fetch(`https://secure-sierra-28532.herokuapp.com/users/login`, {
             method: 'POST',
             body: JSON.stringify(reqbody),
             headers: reqHeaders,
@@ -73,7 +69,7 @@
         'Content-Type': 'application/json'
         });
 
-        await fetch(`http://localhost:3000/users`, {
+        await fetch(`https://secure-sierra-28532.herokuapp.com/users`, {
             method: 'POST',
             body: reqBody,
             headers: reqHeaders,
