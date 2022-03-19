@@ -4,9 +4,8 @@ const app = new App({
   target: document.body,
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
+    console.log(`Our app is running!`);
 });
 
 export default app;
